@@ -1,0 +1,26 @@
+# The data is a list of:
+# TIME PROCESS-ID PRIORITY
+# Each is a number.  The PROCESS-ID should identify a particular
+# process.  If nothing is scheduled (the CPU is idle), it should
+# be -1.
+#
+# Think the times as when the given process *starts* running.
+# That process *stops* running when the next one starts (or
+# when the CPU goes idle).  Thus, there should be a final
+# entry that specifies when the last process stopped --
+# that is, the time your simulation ended.  You are probably
+# best off just generating one using the time the simulation
+# stops and the -1 (idle) process ID.
+#
+# Plot process data by opening up the .html file in your
+# browser, closing the "terminal" window on the web page,
+# and then running the send_job_data.py file giving it
+# the data as its standard input.  For example:
+#    cat test.txt | ./send_job_data.py
+
+0    0  0
+1    1  1 # Higher priority queue
+2    2  0
+4   -1  0 # -1 means it goes idle
+4.5  3  1 # Fractional times are okay
+8   -1  0
